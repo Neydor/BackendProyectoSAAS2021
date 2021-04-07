@@ -34,9 +34,6 @@ export const User = db.define(nombreTabla, {
     celuar: {
         type: Sequelize.STRING
     },
-    rol: {
-        type: Sequelize.INTEGER
-    },
     password: {
         type: Sequelize.STRING
     },

@@ -30,7 +30,7 @@ app.use(cookieParser());
 
 
 app.use('/', router)
-const port = process.env.PORT || 6969;
+
 
 
 const verifyJWT = (req, res, next) => {
@@ -49,7 +49,7 @@ const verifyJWT = (req, res, next) => {
         })
     }
 }
-
+const port = process.env.PORT || 6969;
 app.listen(port, () => {
     console.log('El servidor esta en el puerto ${port}')
 })

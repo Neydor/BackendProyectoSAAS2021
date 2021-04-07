@@ -1,5 +1,6 @@
 import { User } from '../models/usuario.js';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const newUser = async(req, res, next) => {
     //crear datos del objeto usuario
@@ -28,16 +29,24 @@ const newUser = async(req, res, next) => {
 }
 
 const usuarios = async(req, res) => {
-    const findUser = await User.findAll();
-    console.log(findUser)
-    res.json({
-        message: 'Se ha buscado el usuario'
+    jwt.verify(req.token, 'secretkey', (error, authData) => {
+        console.log(error)
+        if (error) {
+            res.sendStatus(403);
+        } else {
+            const findUser = User.findAll();
+            console.log(findUser)
+            res.json({
+                message: 'Se ha buscado el usuarios',
+                users: findUser
+            });
+        }
     });
 }
 
 const usuario = async(req, res) => {
     res.json({
-        message: 'Se ha buscado a usuarios'
+        message: 'Se ha buscado a usuario'
     });
 }
 export {
