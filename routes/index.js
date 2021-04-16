@@ -19,10 +19,10 @@ router.get('/sedes', sedesAll);//app.get('/sedes'
 router.get('/sedes/:id_sede', sedesId);//app.get('/sedes/:id_sede',
 router.post('/sedes',sedeCreate);//app.post('/sedes',
 router.put("/sedes/:id_sede", sedeEdit);//app.put('/sedes/:id_sede'
-router.delete('/sedes/:id_sedes', sedeDelete);//app.delete('/sedes/:id_sedes',
+router.delete('/sedes/:id_sede', sedeDelete);//app.delete('/sedes/:id_sedes',
 //Cursos
 router.get('/cursos', cursosAll);
-router.get('/Curso/:id_curso', cursosId);
+router.get('/cursos/:id_curso', cursosId);
 router.post('/cursos',cursosCreate);
 router.put('/cursos/:id_curso', cursosEdit);
 router.delete('/cursos/:id_curso', cursosDelete);

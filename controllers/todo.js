@@ -17,10 +17,10 @@ const conexion = mysql.createConnection({
     database: 'be3bym6qdtkisnd7hdbh'
 });
 
-conexion.connect( function (error)  {
+conexion.connect(function (error) {
 
-    if (error) {throw error;}
-    else{console.log('Conexion establecida');}
+    if (error) { throw error; }
+    else { console.log('Conexion establecida'); }
 
 });
 
@@ -42,7 +42,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('No hay registros en la BD de usuario');
 //         }
-    
+
 //     });
 
 // });
@@ -61,7 +61,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('no hay coincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -91,7 +91,7 @@ conexion.connect( function (error)  {
 
 // });
 // app.put('/usuarios/:id_usuario',(req,res)=> {
-   
+
 //         const{id_usuario} = req.params;
 //         const{
 //             primer_nombre,
@@ -106,7 +106,7 @@ conexion.connect( function (error)  {
 //             password,
 //             t003_roles_id_rol
 //         } = req.body;
-        
+
 //         const sql = `UPDATE t001_usuarios SET 
 //                             primer_nombre =  '${primer_nombre}',
 //                             segundo_nombre =  '${segundo_nombre}',
@@ -131,7 +131,7 @@ conexion.connect( function (error)  {
 // });
 
 // app.delete('/usuarios/:id_usuario',(req,res)=> {
-   
+
 //     const {id_usuario} = req.params
 //     const sql = `DELETE FROM t001_usuario WHERE id_usuario = ${id_usuario}`;
 
@@ -171,7 +171,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('No hay registros en la BD');
 //         }
-    
+
 //     });
 
 // });
@@ -190,7 +190,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('no hay conincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -213,10 +213,10 @@ conexion.connect( function (error)  {
 
 // });
 // app.put('/referencias/:id_referencia',(req,res)=> {
-   
+
 //         const{id_referencia} = req.params;
 //         const{estado,dominio,rango_valor,descripcion} = req.body;
-  
+
 //         const sql = `UPDATE t002_referencias SET 
 //                             estado =   '${estado}'
 //                             dominio =   '${dominio}'
@@ -234,7 +234,7 @@ conexion.connect( function (error)  {
 // });
 
 // app.delete('/referencias/:id_referecia',(req,res)=> {
-   
+
 //     const {id_referecia} = req.params
 //     const sql = `DELETE FROM t002_referencias WHERE id_referecia = ${id_referecia}`;
 
@@ -275,7 +275,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('No hay registros en la BD de roles');
 //         }
-    
+
 //     });
 
 // });
@@ -294,7 +294,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('no hay coincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -315,13 +315,13 @@ conexion.connect( function (error)  {
 
 // });
 // app.put('/roles/:id_rol',(req,res)=> {
-   
+
 //         const{id_rol} = req.params;
 //         const{
 //             nombre_rol,
 //             tipo_rol
 //         } = req.body;
-        
+
 //         const sql = `UPDATE t003_roles SET 
 //                         nombre_rol =  '${nombre_rol}',
 //                         tipo_rol =  '${tipo_rol}'         
@@ -337,7 +337,7 @@ conexion.connect( function (error)  {
 // });
 
 // app.delete('/roles/:id_rol',(req,res)=> {
-   
+
 //     const {id_rol} = req.params
 //     const sql = `DELETE FROM t003_roles WHERE id_rol = ${id_rol}`;
 
@@ -378,7 +378,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('No hay registros en la BD de membresias');
 //         }
-    
+
 //     });
 
 // });
@@ -397,7 +397,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('no hay coincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -420,16 +420,16 @@ conexion.connect( function (error)  {
 
 // });
 // app.put('/membresias/:id_membresia',(req,res)=> {
-   
+
 //         const{id_membresia} = req.params;
 //         const{
 //             estado,
 //             nombre_membresia,
 //             duracion,
 //             precio
-            
+
 //         } = req.body;
-        
+
 //         const sql = `UPDATE t004_membresias SET 
 //                             estado =  ${estado},
 //                             nombre_membresia =  '${nombre_membresia}',
@@ -447,7 +447,7 @@ conexion.connect( function (error)  {
 // });
 
 // app.delete('/membresias/:id_membresia',(req,res)=> {
-   
+
 //     const {id_membresia} = req.params
 //     const sql = `DELETE FROM t004_membresia WHERE id_membresia = ${id_membresia}`;
 
@@ -488,7 +488,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('No hay registros en la BD de membresias_usuarios');
 //         }
-    
+
 //     });
 
 // });
@@ -507,7 +507,7 @@ conexion.connect( function (error)  {
 //         else {
 //             res.send('no hay coincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -534,7 +534,7 @@ conexion.connect( function (error)  {
 
 // });
 // app.put('/membresias_usuarios/:id_relacion',(req,res)=> {
-   
+
 //         const{id_relacion} = req.params;
 //         const{
 //             estado ,
@@ -544,10 +544,10 @@ conexion.connect( function (error)  {
 //             fecha_activacion ,
 //             t001_usuarios_id_usuarios ,
 //             t004_membresias_id_membresia
-    
-            
+
+
 //         } = req.body;
-        
+
 //         const sql = `UPDATE t004_memxt005_usr SET 
 //                             estado =  ${estado},
 //                             id_membresia =  ${id_membresia},
@@ -568,7 +568,7 @@ conexion.connect( function (error)  {
 // });
 
 // app.delete('/membresias_usuarios/:id_relacion',(req,res)=> {
-   
+
 //     const {id_relacion} = req.params
 //     const sql = `DELETE FROM t004_memxt005_usr WHERE id_relacion = ${id_relacion}`;
 
@@ -599,41 +599,53 @@ conexion.connect( function (error)  {
 
 
 
-const sedesAll = async(req,res) => {
-    conexion.query('SELECT * FROM t005_sedes ',function(error,results,fields){
+const sedesAll = async (req, res) => {
+    console.log("entro en sedesAll")
+    try {
+        conexion.query('SELECT * FROM t005_sedes ', function (error, results, fields) {
 
-        if (error) 
-        throw error;
-        if (results.length > 0){
-            res.json(results);
-        }
-        else {
-            res.send('No hay registros en la BD de Sedes');
-        }
-    
-    });
+            if (error)
+                throw error;
+            if (results.length > 0) {
+                res.json(results);
+            }
+            else {
+                res.send('No hay registros en la BD de Sedes');
+            }
 
-};
-const sedesId = async(req,res)=> {
+        });
 
-    const {id_sede} = req.params
-    const sql = `SELECT * FROM t005_sedes WHERE id_sede = ${id_sede}`;
+    } catch (error) {
+        console.log(error)
+    }
 
-    conexion.query(sql,function(error,results,fields){
 
-        if (error) 
-        throw error;
-        if (results.length > 0){
-            res.json(results);
-        }
-        else {
-            res.send('no hay coincidencias');
-        }
-    
-    });
 
 };
-const sedeCreate = async(req,res,next)=> {
+const sedesId = async (req, res) => {
+    try {
+        const { id_sede } = req.params
+        const sql = `SELECT * FROM t005_sedes WHERE id_sede = ${id_sede}`;
+
+        conexion.query(sql, function (error, results, fields) {
+
+            if (error)
+                throw error;
+            if (results.length > 0) {
+                res.json(results);
+            }
+            else {
+                res.send('no hay coincidencias');
+            }
+
+        });
+    } catch (error) {
+        console.log(error)
+    }
+
+
+};
+const sedeCreate = async (req, res, next) => {
 
     const sql = 'INSERT INTO t005_sedes SET ?';
 
@@ -648,57 +660,55 @@ const sedeCreate = async(req,res,next)=> {
 
     };
 
-    conexion.query(sql,estacion_obj,function(error){
+    conexion.query(sql, estacion_obj, function (error) {
 
-    if (error) throw error;
+        if (error) throw error;
         res.send('Sede Creado');
     });
 
 };
-const sedeEdit = async(req,res)=> {
-   
-        const{id_sede} = req.params;
-        const{
-            estado ,
-            nombre_sede ,
-            latitud ,
-            longitud ,
-            id_cuidad ,
-            id_usuario ,
-            t001_usuarios_id_usuario
-    
-            
-        } = req.body;
-        
-        const sql = `UPDATE t004_memxt005_usr SET 
+const sedeEdit = async (req, res) => {
+    console.log("entro a sedeEdit",req.params,req.body)
+    const { id_sede } = req.params;
+    const {
+        estado,
+        nombre_sede,
+        latitud,
+        longitud,
+        id_ciudad,
+        id_usuario,
+        t001_usuarios_id_usuario
+    } = req.body;
+
+    const sql = `UPDATE t005_sedes SET 
                             estado =  ${estado},
                             nombre_sede =  '${nombre_sede}',
                             latitud =  ${latitud},
                             longitud =  ${longitud},
-                            id_cuidad =  ${id_cuidad},
-                            id_usuario =  ${id_usuario},
+                            id_ciudad =  ${id_ciudad},
+                            id_usuario = ${id_usuario},
                             t001_usuarios_id_usuario = ${t001_usuarios_id_usuario}              
                      WHERE id_sede = '${id_sede}' `;
 
-    conexion.query(sql,function(error){
+    conexion.query(sql, function (error) {
 
-    if (error) throw error;
+        if (error) throw error;
         res.send('Sede Actualizado!');
     });
 
 
 };
 
-const sedeDelete = async(req,res)=> {
-   
-    const {id_sedes} = req.params
+const sedeDelete = async (req, res) => {
+
+    const { id_sedes } = req.params
     const sql = `DELETE FROM t005_sedes WHERE id_sedes = ${id_sedes}`;
 
-    conexion.query(sql,function(error,results,fields){
+    conexion.query(sql, function (error, results, fields) {
 
         if (error) throw error;
-            res.send('Sedes  Eliminado!');
-        });
+        res.send('Sedes  Eliminado!');
+    });
 
 };
 
@@ -718,42 +728,49 @@ const sedeDelete = async(req,res)=> {
 
 
 
-const cursosAll = async (req,res)=> {
-    conexion.query('SELECT * FROM t006_cursos ',function(error,results,fields){
+const cursosAll = async (req, res) => {
+    console.log("entro en cursosAll")
+    try {
 
-        if (error) 
-        throw error;
-        if (results.length > 0){
-            res.json(results);
-            console.log("CURSOSALL SI")
-        }
-        else {
-            res.send('No hay registros en la BD de Cursos');
-            console.log("CURSOSALL NO")
-        }
-    });
+        conexion.query('SELECT * FROM t006_cursos ', function (error, results, fields) {
+
+            if (error)
+                throw error;
+            if (results.length > 0) {
+                res.json(results);
+                console.log("CURSOSALL SI")
+            }
+            else {
+                res.send('No hay registros en la BD de Cursos');
+                console.log("CURSOSALL NO")
+            }
+        });
+    } catch (error) {
+        console.log("error de busqueda de todas las sedes")
+    }
+
 
 };
-const cursosId = async (req,res)=> {
+const cursosId = async (req, res) => {
 
-    const {id_curso} = req.params
-    const sql = `SELECT * FROM t005_sedes WHERE id_curso = ${id_curso}`;
+    const { id_curso } = req.params
+    const sql = `SELECT * FROM t006_cursos WHERE id_curso = ${id_curso}`;
 
-    conexion.query(sql,function(error,results,fields){
+    conexion.query(sql, function (error, results, fields) {
 
-        if (error) 
-        throw error;
-        if (results.length > 0){
+        if (error)
+            throw error;
+        if (results.length > 0) {
             res.json(results);
         }
         else {
             res.send('no hay coincidencias');
         }
-    
+
     });
 
 };
-const cursosCreate = async(req,res,netx)=> {
+const cursosCreate = async (req, res, netx) => {
 
     const sql = 'INSERT INTO t006_cursos SET ?';
 
@@ -766,54 +783,54 @@ const cursosCreate = async(req,res,netx)=> {
         "categoria_curso": req.body.categoria_cursos
     };
     console.log(req.body)
-    conexion.query(sql,estacion_obj,function(error){
+    conexion.query(sql, estacion_obj, function (error) {
 
-    if (error) throw error;
+        if (error) throw error;
         res.send('Curso Creado');
     });
 
 };
-const cursosEdit= async(req,res)=> {
-   
-        const{id_curso} = req.params;
-        const{
-            estado ,
-            codigo_curso ,
-            nombre_curso ,
-            descripcion_curso ,
-            creditos_cursos ,
-            categoria_cursos     
-            
-        } = req.body;
-        
-        const sql = `UPDATE t006_cursos SET 
+const cursosEdit = async (req, res) => {
+
+    const { id_curso } = req.params;
+    const {
+        estado,
+        codigo_curso,
+        nombre_curso,
+        descripcion_curso,
+        creditos_curso,
+        categoria_curso
+
+    } = req.body;
+
+    const sql = `UPDATE t006_cursos SET 
                             estado =  ${estado},
                             codigo_curso =  '${codigo_curso}',
                             nombre_curso =  '${nombre_curso}',
                             descripcion_curso =  '${descripcion_curso}',
-                            creditos_cursos =  ${creditos_cursos},
-                            categoria_cursos = ${categoria_cursos}
+                            creditos_curso =  ${creditos_curso},
+                            categoria_curso = ${categoria_curso}
                              WHERE id_curso = '${id_curso}' `;
 
-    conexion.query(sql,function(error){
+    conexion.query(sql, function (error) {
 
-    if (error) throw error;
+        if (error) throw error;
         res.send('Curso Actualizado!');
     });
 
 
 };
 
-const cursosDelete = async(req,res)=> {
-   
-    const {id_curso} = req.params
+const cursosDelete = async (req, res) => {
+
+    const { id_curso } = req.params
     const sql = `DELETE FROM t006_curso WHERE id_curso = ${id_curso}`;
 
-    conexion.query(sql,function(error,results,fields){
+    conexion.query(sql, function (error, results, fields) {
 
         if (error) throw error;
-            res.send('Curso  Eliminado!');
-        });
+        res.send('Curso  Eliminado!');
+    });
 
 };
 
@@ -846,7 +863,7 @@ const cursosDelete = async(req,res)=> {
 //         else {
 //             res.send('No hay registros en la BD de Grupos');
 //         }
-    
+
 //     });
 
 // });
@@ -865,7 +882,7 @@ const cursosDelete = async(req,res)=> {
 //         else {
 //             res.send('no hay coincidencias');
 //         }
-    
+
 //     });
 
 // });
@@ -888,7 +905,7 @@ const cursosDelete = async(req,res)=> {
 
 // });
 // app.put('/grupos/:id_grupo',(req,res)=> {
-   
+
 //         const{id_grupo} = req.params;
 //         const{
 //             estado ,
@@ -896,7 +913,7 @@ const cursosDelete = async(req,res)=> {
 //             semestre ,
 //             total_estudiantes            
 //         } = req.body;
-        
+
 //         const sql = `UPDATE t007_grupos SET 
 //                             estado =  ${estado},
 //                             cupo_estudiantes =  ${cupo_estudiantes},
@@ -912,7 +929,7 @@ const cursosDelete = async(req,res)=> {
 // });
 
 // app.delete('/grupos/:id_grupo',(req,res)=> {
-   
+
 //     const {id_grupo} = req.params
 //     const sql = `DELETE FROM t007_grupos WHERE id_grupo = ${id_grupo}`;
 
@@ -934,7 +951,7 @@ export {
     sedeCreate,
     sedeDelete,
     //cursos
-    cursosAll,cursosId,cursosEdit,cursosDelete,cursosCreate
+    cursosAll, cursosId, cursosEdit, cursosDelete, cursosCreate
 
 }
 
